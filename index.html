@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Empresa CNPJ 44.671.646/0001‑76</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    button { margin: 5px; padding: 10px 20px; cursor: pointer; }
+    .info { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h1>Dados da Empresa: CNPJ 44.671.646/0001‑76</h1>
+  <div>
+    <button onclick="show('visao')">Visão Geral</button>
+    <button onclick="show('localizacao')">Localização</button>
+    <button onclick="show('constituicao')">Constituição Empresarial</button>
+    <button onclick="show('atividades')">Atividades Econômicas</button>
+    <button onclick="show('contato')">Contato</button>
+  </div>
+
+  <div id="info" class="info">Clique em um botão para ver as informações.</div>
+
+  <script>
+    const data = {
+      visao: `
+        <h2>Visão Geral</h2>
+        <p><strong>Nome:</strong> Jolly Confecções e Perfumaria – Joina Rodrigues Araujo Protazio</p>
+        <p><strong>Status:</strong> Ativa</p>
+        <p><strong>Fundação:</strong> 23/12/2021</p>
+        <p><strong>Capital Social:</strong> R$ 10.000,00</p>
+        <p><strong>Porte:</strong> Microempresa</p>
+        <p><strong>Natureza jurídica:</strong> Empresário individual</p>
+        <p><strong>Regime tributário:</strong> Simples Nacional</p>
+      `,
+      localizacao: `
+        <h2>Localização</h2>
+        <p>Rua Principal, Nº 10 – Conjunto União<br>
+           Morros – MA<br>
+           CEP 65160‑000</p>
+      `,
+      constituicao: `
+        <h2>Constituição Empresarial</h2>
+        <p><strong>Razão Social:</strong> Joina Rodrigues Araujo Protazio<br>
+           <strong>Fantasia:</strong> Jolly Confecções e Perfumaria<br>
+           <strong>CNPJ:</strong> 44.671.646/0001‑76<br>
+           <strong>Tempo em atividade:</strong> Cerca de 3 anos e 7 meses<br>
+           <strong>Unidades:</strong> Apenas matriz<br>
+           <strong>Sócios:</strong> 1 pessoa</p>
+      `,
+      atividades: `
+        <h2>Atividades Econômicas (CNAE)</h2>
+        <ul>
+          <li>4781‑4/00 – Comércio varejista de artigos do vestuário e acessórios</li>
+          <li>4772‑5/00 – Comércio varejista de cosméticos, produtos de perfumaria e de higiene pessoal</li>
+        </ul>
+      `,
+      contato: `
+        <h2>Contato</h2>
+        <p><strong>Telefone:</strong> (98) 98428‑3540<br>
+           <strong>E‑mail:</strong> joinaprotazio@gmail.com</p>
+      `
+    };
+
+    function show(section) {
+      document.getElementById('info').innerHTML = data[section] || '';
+    }
+  </script>
+</body>
+</html>
